@@ -257,7 +257,7 @@ public class PikabuBot extends TelegramLongPollingBot {
 
   private boolean isCommand(boolean isGroup, String text, String command) {
     String cmd = isGroup ? String.format("%s@%s", command, getBotUsername()) : command;
-    return text.toLowerCase().startsWith(cmd);
+    return text.toLowerCase().startsWith(cmd.toLowerCase());
   }
 
   private void sendTyping(long chatId) {
